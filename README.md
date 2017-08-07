@@ -1,1 +1,3 @@
-dft_practice
+# Practice files for DFT calculations
+
+## using ABINIT package
