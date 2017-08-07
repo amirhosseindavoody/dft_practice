@@ -1,0 +1,285 @@
+
+.Version 8.4.1 of ABINIT 
+.(sequential version, prepared for a x86_64_linux_gnu7.0 computer) 
+
+.Copyright (C) 1998-2017 ABINIT group . 
+ ABINIT comes with ABSOLUTELY NO WARRANTY.
+ It is free software, and you are welcome to redistribute it
+ under certain conditions (GNU General Public License,
+ see ~abinit/COPYING or http://www.gnu.org/copyleft/gpl.txt).
+
+ ABINIT is a project of the Universite Catholique de Louvain,
+ Corning Inc. and other collaborators, see ~abinit/doc/developers/contributors.txt .
+ Please read ~abinit/doc/users/acknowledgments.html for suggested
+ acknowledgments of the ABINIT effort.
+ For more information, see http://www.abinit.org .
+
+.Starting date : Mon  7 Aug 2017.
+- ( at 11h18 )
+  
+- input  file    -> graphene.in
+- output file    -> graphene.out
+- root for input  files -> graphene_xi
+- root for output files -> graphene_xo
+
+
+ DATASET    1 : space group P6/m m m (#191); Bravais hP (primitive hexag.)
+================================================================================
+ Values of the parameters that define the memory need for DATASET  1.
+     intxc =       0    ionmov =       0      iscf =       7    lmnmax =       1
+     lnmax =       1     mgfft =       2  mpssoang =       2    mqgrid =    3001
+     natom =       2  nloc_mem =       1    nspden =       1   nspinor =       1
+    nsppol =       1      nsym =      24    n1xccc =    2501    ntypat =       1
+    occopt =       1   xclevel =       1
+-    mband =           5        mffmem =           1         mkmem =           2
+       mpw =           0          nfft =           8          nkpt =           2
+================================================================================
+P This job should need less than                       0.557 Mbytes of memory.
+  Rough estimation (10% accuracy) of disk space for files :
+_ WF disk file :      0.002 Mbytes ; DEN or POT disk file :      0.002 Mbytes.
+================================================================================
+
+
+ DATASET    2 : space group P6/m m m (#191); Bravais hP (primitive hexag.)
+================================================================================
+ Values of the parameters that define the memory need for DATASET  2.
+     intxc =       0    ionmov =       0      iscf =       7    lmnmax =       1
+     lnmax =       1     mgfft =       2  mpssoang =       2    mqgrid =    3001
+     natom =       2  nloc_mem =       1    nspden =       1   nspinor =       1
+    nsppol =       1      nsym =      24    n1xccc =    2501    ntypat =       1
+    occopt =       1   xclevel =       1
+-    mband =           5        mffmem =           1         mkmem =           2
+       mpw =           0          nfft =           8          nkpt =           2
+================================================================================
+P This job should need less than                       0.557 Mbytes of memory.
+  Rough estimation (10% accuracy) of disk space for files :
+_ WF disk file :      0.002 Mbytes ; DEN or POT disk file :      0.002 Mbytes.
+================================================================================
+
+
+ DATASET    3 : space group P6/m m m (#191); Bravais hP (primitive hexag.)
+================================================================================
+ Values of the parameters that define the memory need for DATASET  3.
+     intxc =       0    ionmov =       0      iscf =       7    lmnmax =       1
+     lnmax =       1     mgfft =       2  mpssoang =       2    mqgrid =    3001
+     natom =       2  nloc_mem =       1    nspden =       1   nspinor =       1
+    nsppol =       1      nsym =      24    n1xccc =    2501    ntypat =       1
+    occopt =       1   xclevel =       1
+-    mband =           5        mffmem =           1         mkmem =           2
+       mpw =           0          nfft =           8          nkpt =           2
+================================================================================
+P This job should need less than                       0.557 Mbytes of memory.
+  Rough estimation (10% accuracy) of disk space for files :
+_ WF disk file :      0.002 Mbytes ; DEN or POT disk file :      0.002 Mbytes.
+================================================================================
+
+
+ DATASET    4 : space group P6/m m m (#191); Bravais hP (primitive hexag.)
+================================================================================
+ Values of the parameters that define the memory need for DATASET  4.
+     intxc =       0    ionmov =       0      iscf =       7    lmnmax =       1
+     lnmax =       1     mgfft =       2  mpssoang =       2    mqgrid =    3001
+     natom =       2  nloc_mem =       1    nspden =       1   nspinor =       1
+    nsppol =       1      nsym =      24    n1xccc =    2501    ntypat =       1
+    occopt =       1   xclevel =       1
+-    mband =           5        mffmem =           1         mkmem =           2
+       mpw =           0          nfft =           8          nkpt =           2
+================================================================================
+P This job should need less than                       0.557 Mbytes of memory.
+  Rough estimation (10% accuracy) of disk space for files :
+_ WF disk file :      0.002 Mbytes ; DEN or POT disk file :      0.002 Mbytes.
+================================================================================
+
+
+ DATASET    5 : space group P6/m m m (#191); Bravais hP (primitive hexag.)
+================================================================================
+ Values of the parameters that define the memory need for DATASET  5.
+     intxc =       0    ionmov =       0      iscf =       7    lmnmax =       1
+     lnmax =       1     mgfft =       2  mpssoang =       2    mqgrid =    3001
+     natom =       2  nloc_mem =       1    nspden =       1   nspinor =       1
+    nsppol =       1      nsym =      24    n1xccc =    2501    ntypat =       1
+    occopt =       1   xclevel =       1
+-    mband =           5        mffmem =           1         mkmem =           2
+       mpw =           0          nfft =           8          nkpt =           2
+================================================================================
+P This job should need less than                       0.557 Mbytes of memory.
+  Rough estimation (10% accuracy) of disk space for files :
+_ WF disk file :      0.002 Mbytes ; DEN or POT disk file :      0.002 Mbytes.
+================================================================================
+
+
+ DATASET    6 : space group P6/m m m (#191); Bravais hP (primitive hexag.)
+================================================================================
+ Values of the parameters that define the memory need for DATASET  6.
+     intxc =       0    ionmov =       0      iscf =       7    lmnmax =       1
+     lnmax =       1     mgfft =       2  mpssoang =       2    mqgrid =    3001
+     natom =       2  nloc_mem =       1    nspden =       1   nspinor =       1
+    nsppol =       1      nsym =      24    n1xccc =    2501    ntypat =       1
+    occopt =       1   xclevel =       1
+-    mband =           5        mffmem =           1         mkmem =           2
+       mpw =           0          nfft =           8          nkpt =           2
+================================================================================
+P This job should need less than                       0.557 Mbytes of memory.
+  Rough estimation (10% accuracy) of disk space for files :
+_ WF disk file :      0.002 Mbytes ; DEN or POT disk file :      0.002 Mbytes.
+================================================================================
+
+
+ DATASET    7 : space group P6/m m m (#191); Bravais hP (primitive hexag.)
+================================================================================
+ Values of the parameters that define the memory need for DATASET  7.
+     intxc =       0    ionmov =       0      iscf =       7    lmnmax =       1
+     lnmax =       1     mgfft =       2  mpssoang =       2    mqgrid =    3001
+     natom =       2  nloc_mem =       1    nspden =       1   nspinor =       1
+    nsppol =       1      nsym =      24    n1xccc =    2501    ntypat =       1
+    occopt =       1   xclevel =       1
+-    mband =           5        mffmem =           1         mkmem =           2
+       mpw =           0          nfft =           8          nkpt =           2
+================================================================================
+P This job should need less than                       0.557 Mbytes of memory.
+  Rough estimation (10% accuracy) of disk space for files :
+_ WF disk file :      0.002 Mbytes ; DEN or POT disk file :      0.002 Mbytes.
+================================================================================
+
+
+ DATASET    8 : space group P6/m m m (#191); Bravais hP (primitive hexag.)
+================================================================================
+ Values of the parameters that define the memory need for DATASET  8.
+     intxc =       0    ionmov =       0      iscf =       7    lmnmax =       1
+     lnmax =       1     mgfft =       2  mpssoang =       2    mqgrid =    3001
+     natom =       2  nloc_mem =       1    nspden =       1   nspinor =       1
+    nsppol =       1      nsym =      24    n1xccc =    2501    ntypat =       1
+    occopt =       1   xclevel =       1
+-    mband =           5        mffmem =           1         mkmem =           2
+       mpw =           0          nfft =           8          nkpt =           2
+================================================================================
+P This job should need less than                       0.557 Mbytes of memory.
+  Rough estimation (10% accuracy) of disk space for files :
+_ WF disk file :      0.002 Mbytes ; DEN or POT disk file :      0.002 Mbytes.
+================================================================================
+
+
+ DATASET    9 : space group P6/m m m (#191); Bravais hP (primitive hexag.)
+================================================================================
+ Values of the parameters that define the memory need for DATASET  9.
+     intxc =       0    ionmov =       0      iscf =       7    lmnmax =       1
+     lnmax =       1     mgfft =       2  mpssoang =       2    mqgrid =    3001
+     natom =       2  nloc_mem =       1    nspden =       1   nspinor =       1
+    nsppol =       1      nsym =      24    n1xccc =    2501    ntypat =       1
+    occopt =       1   xclevel =       1
+-    mband =           5        mffmem =           1         mkmem =           2
+       mpw =           0          nfft =           8          nkpt =           2
+================================================================================
+P This job should need less than                       0.557 Mbytes of memory.
+  Rough estimation (10% accuracy) of disk space for files :
+_ WF disk file :      0.002 Mbytes ; DEN or POT disk file :      0.002 Mbytes.
+================================================================================
+
+
+ DATASET   10 : space group P6/m m m (#191); Bravais hP (primitive hexag.)
+================================================================================
+ Values of the parameters that define the memory need for DATASET 10.
+     intxc =       0    ionmov =       0      iscf =       7    lmnmax =       1
+     lnmax =       1     mgfft =       2  mpssoang =       2    mqgrid =    3001
+     natom =       2  nloc_mem =       1    nspden =       1   nspinor =       1
+    nsppol =       1      nsym =      24    n1xccc =    2501    ntypat =       1
+    occopt =       1   xclevel =       1
+-    mband =           5        mffmem =           1         mkmem =           2
+       mpw =           0          nfft =           8          nkpt =           2
+================================================================================
+P This job should need less than                       0.557 Mbytes of memory.
+  Rough estimation (10% accuracy) of disk space for files :
+_ WF disk file :      0.002 Mbytes ; DEN or POT disk file :      0.002 Mbytes.
+================================================================================
+
+--------------------------------------------------------------------------------
+------------- Echo of variables that govern the present computation ------------
+--------------------------------------------------------------------------------
+-
+- outvars: echo of selected default values                                      
+-   iomode0 =  0 , fftalg0 =112 , wfoptalg0 =  0
+-
+- outvars: echo of global parameters not present in the input file              
+-  max_nthreads =    0
+-
+ -outvars: echo values of preprocessed input variables --------
+            acell      4.7132664114E+00  4.7132664114E+00  1.8897261329E+01 Bohr
+              amu      1.20110000E+01
+           diemac      1.20000000E+01
+-          fftalg         112
+           jdtset        1    2    3    4    5    6    7    8    9   10
+              kpt      0.00000000E+00  0.00000000E+00  2.50000000E-01
+                       5.00000000E-01  0.00000000E+00  2.50000000E-01
+         kptrlatt        2    0    0      0    2    0      0    0    2
+          kptrlen      9.42653282E+00
+P           mkmem           2
+            natom           2
+            nband           5
+           ndtset          10
+            ngfft           2       2       2
+             nkpt           2
+            nstep          10
+             nsym          24
+           ntypat           1
+              occ      2.000000  2.000000  2.000000  2.000000  0.000000
+            rprim      1.0000000000E+00  0.0000000000E+00  0.0000000000E+00
+                      -5.0000000000E-01  8.6602540378E-01  0.0000000000E+00
+                       0.0000000000E+00  0.0000000000E+00  1.0000000000E+00
+           shiftk      0.00000000E+00  0.00000000E+00  5.00000000E-01
+          spgroup         191
+           symrel      1  0  0   0  1  0   0  0  1      -1  0  0   0 -1  0   0  0 -1
+                       0  1  0   1  0  0   0  0  1       0 -1  0  -1  0  0   0  0 -1
+                       1  1  0  -1  0  0   0  0  1      -1 -1  0   1  0  0   0  0 -1
+                      -1  0  0   1  1  0   0  0  1       1  0  0  -1 -1  0   0  0 -1
+                       0  1  0  -1 -1  0   0  0  1       0 -1  0   1  1  0   0  0 -1
+                      -1 -1  0   0  1  0   0  0  1       1  1  0   0 -1  0   0  0 -1
+                      -1  0  0   0 -1  0   0  0  1       1  0  0   0  1  0   0  0 -1
+                       0 -1  0  -1  0  0   0  0  1       0  1  0   1  0  0   0  0 -1
+                      -1 -1  0   1  0  0   0  0  1       1  1  0  -1  0  0   0  0 -1
+                       1  0  0  -1 -1  0   0  0  1      -1  0  0   1  1  0   0  0 -1
+                       0 -1  0   1  1  0   0  0  1       0  1  0  -1 -1  0   0  0 -1
+                       1  1  0   0 -1  0   0  0  1      -1 -1  0   0  1  0   0  0 -1
+            tnons      0.0000000  0.0000000  0.0000000    -0.3333333  0.3333333  0.0000000
+                      -0.3333333  0.3333333  0.0000000     0.0000000  0.0000000  0.0000000
+                      -0.3333333  0.3333333  0.0000000     0.0000000  0.0000000  0.0000000
+                       0.0000000  0.0000000  0.0000000    -0.3333333  0.3333333  0.0000000
+                       0.0000000  0.0000000  0.0000000    -0.3333333  0.3333333  0.0000000
+                      -0.3333333  0.3333333  0.0000000     0.0000000  0.0000000  0.0000000
+                      -0.3333333  0.3333333  0.0000000     0.0000000  0.0000000  0.0000000
+                       0.0000000  0.0000000  0.0000000    -0.3333333  0.3333333  0.0000000
+                       0.0000000  0.0000000  0.0000000    -0.3333333  0.3333333  0.0000000
+                      -0.3333333  0.3333333  0.0000000     0.0000000  0.0000000  0.0000000
+                      -0.3333333  0.3333333  0.0000000     0.0000000  0.0000000  0.0000000
+                       0.0000000  0.0000000  0.0000000    -0.3333333  0.3333333  0.0000000
+           toldfe      1.00000000E-06 Hartree
+            typat      1  1
+              wtk        0.25000    0.75000
+           xangst      0.0000000000E+00  0.0000000000E+00  0.0000000000E+00
+                       1.2470765814E+00  7.2000000000E-01  0.0000000000E+00
+            xcart      0.0000000000E+00  0.0000000000E+00  0.0000000000E+00
+                       2.3566332057E+00  1.3606028157E+00  0.0000000000E+00
+             xred      0.0000000000E+00  0.0000000000E+00  0.0000000000E+00
+                       6.6666666667E-01  3.3333333333E-01  0.0000000000E+00
+            znucl        6.00000
+
+================================================================================
+
+ chkinp: Checking input parameters for consistency, jdtset=   1.
+
+ chkinp: Checking input parameters for consistency, jdtset=   2.
+
+ chkinp: Checking input parameters for consistency, jdtset=   3.
+
+ chkinp: Checking input parameters for consistency, jdtset=   4.
+
+ chkinp: Checking input parameters for consistency, jdtset=   5.
+
+ chkinp: Checking input parameters for consistency, jdtset=   6.
+
+ chkinp: Checking input parameters for consistency, jdtset=   7.
+
+ chkinp: Checking input parameters for consistency, jdtset=   8.
+
+ chkinp: Checking input parameters for consistency, jdtset=   9.
+
+ chkinp: Checking input parameters for consistency, jdtset=  10.

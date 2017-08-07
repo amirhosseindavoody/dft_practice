@@ -1,0 +1,6 @@
+ Fermi (or HOMO) energy (hartree) =  -0.10931   Average Vxc (hartree)=  -0.16076
+ Eigenvalues (hartree) for nkpt=   2  k points:
+ kpt#   1, nband=  5, wtk=  0.25000, kpt=  0.0000  0.0000  0.2500 (reduced coord)
+  -0.72488   -0.29927   -0.12965   -0.12965    0.09138
+ kpt#   2, nband=  5, wtk=  0.75000, kpt=  0.5000  0.0000  0.2500 (reduced coord)
+  -0.53471   -0.49836   -0.25201   -0.10931    0.03431
