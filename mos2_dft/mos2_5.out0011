@@ -1,0 +1,24 @@
+
+.Version 8.4.1 of ABINIT 
+.(sequential version, prepared for a x86_64_linux_gnu7.0 computer) 
+
+.Copyright (C) 1998-2017 ABINIT group . 
+ ABINIT comes with ABSOLUTELY NO WARRANTY.
+ It is free software, and you are welcome to redistribute it
+ under certain conditions (GNU General Public License,
+ see ~abinit/COPYING or http://www.gnu.org/copyleft/gpl.txt).
+
+ ABINIT is a project of the Universite Catholique de Louvain,
+ Corning Inc. and other collaborators, see ~abinit/doc/developers/contributors.txt .
+ Please read ~abinit/doc/users/acknowledgments.html for suggested
+ acknowledgments of the ABINIT effort.
+ For more information, see http://www.abinit.org .
+
+.Starting date : Wed  9 Aug 2017.
+- ( at 12h16 )
+  
+- input  file    -> mos2_5.in
+- output file    -> mos2_5.out
+- root for input  files -> mos2_5i
+- root for output files -> mos2_5o
+

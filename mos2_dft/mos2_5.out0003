@@ -1,0 +1,268 @@
+
+.Version 8.4.1 of ABINIT 
+.(sequential version, prepared for a x86_64_linux_gnu7.0 computer) 
+
+.Copyright (C) 1998-2017 ABINIT group . 
+ ABINIT comes with ABSOLUTELY NO WARRANTY.
+ It is free software, and you are welcome to redistribute it
+ under certain conditions (GNU General Public License,
+ see ~abinit/COPYING or http://www.gnu.org/copyleft/gpl.txt).
+
+ ABINIT is a project of the Universite Catholique de Louvain,
+ Corning Inc. and other collaborators, see ~abinit/doc/developers/contributors.txt .
+ Please read ~abinit/doc/users/acknowledgments.html for suggested
+ acknowledgments of the ABINIT effort.
+ For more information, see http://www.abinit.org .
+
+.Starting date : Wed  9 Aug 2017.
+- ( at 11h16 )
+  
+- input  file    -> mos2_5.in
+- output file    -> mos2_5.out
+- root for input  files -> mos2_5i
+- root for output files -> mos2_5o
+
+
+ DATASET    1 : space group P-6 m 2 (#187); Bravais hP (primitive hexag.)
+================================================================================
+ Values of the parameters that define the memory need for DATASET  1.
+     intxc =       0    ionmov =       0      iscf =       7    lmnmax =       6
+     lnmax =       6     mgfft =      72  mpssoang =       3    mqgrid =    3548
+     natom =       3  nloc_mem =       1    nspden =       1   nspinor =       1
+    nsppol =       1      nsym =      12    n1xccc =    2501    ntypat =       2
+    occopt =       1   xclevel =       1
+-    mband =          10        mffmem =           1         mkmem =           8
+       mpw =        2052          nfft =       41472          nkpt =           8
+================================================================================
+P This job should need less than                      16.211 Mbytes of memory.
+  Rough estimation (10% accuracy) of disk space for files :
+_ WF disk file :      2.507 Mbytes ; DEN or POT disk file :      0.318 Mbytes.
+================================================================================
+
+
+ DATASET    2 : space group P-6 m 2 (#187); Bravais hP (primitive hexag.)
+================================================================================
+ Values of the parameters that define the memory need for DATASET  2.
+     intxc =       0    ionmov =       0      iscf =      -2    lmnmax =       6
+     lnmax =       6     mgfft =      72  mpssoang =       3    mqgrid =    3548
+     natom =       3  nloc_mem =       1    nspden =       1   nspinor =       1
+    nsppol =       1      nsym =      12    n1xccc =    2501    ntypat =       2
+    occopt =       1   xclevel =       1
+-    mband =          16        mffmem =           1         mkmem =          48
+       mpw =        2041          nfft =       41472          nkpt =          48
+================================================================================
+P This job should need less than                      33.616 Mbytes of memory.
+  Rough estimation (10% accuracy) of disk space for files :
+_ WF disk file :     23.920 Mbytes ; DEN or POT disk file :      0.318 Mbytes.
+================================================================================
+
+--------------------------------------------------------------------------------
+------------- Echo of variables that govern the present computation ------------
+--------------------------------------------------------------------------------
+-
+- outvars: echo of selected default values                                      
+-   iomode0 =  0 , fftalg0 =112 , wfoptalg0 =  0
+-
+- outvars: echo of global parameters not present in the input file              
+-  max_nthreads =    0
+-
+ -outvars: echo values of preprocessed input variables --------
+            acell      6.0204074108E+00  6.0204074108E+00  1.9112404479E+01 Bohr
+              amu      9.59400000E+01  3.20660000E+01
+           diemac      1.20000000E+01
+             ecut      1.70000000E+01 Hartree
+           enunit1          0
+           enunit2          1
+-          fftalg         112
+           getden1          0
+           getden2         -1
+             iscf1          7
+             iscf2         -2
+           istwfk2       2    0    0    0    0    0    0    0    0    0
+                         0    0    0    0    0    0    0    3    0    0
+                         0    0    0    0    0    0    0    0    0    0
+                         0    0    0    0    0    0    0    0    0    0
+                         0    0    0    0    0    0    0    2
+           jdtset        1    2
+              kpt1     0.00000000E+00  0.00000000E+00  1.25000000E-01
+                       2.50000000E-01  0.00000000E+00  1.25000000E-01
+                       5.00000000E-01  0.00000000E+00  1.25000000E-01
+                       2.50000000E-01  2.50000000E-01  1.25000000E-01
+                       0.00000000E+00  0.00000000E+00  3.75000000E-01
+                       2.50000000E-01  0.00000000E+00  3.75000000E-01
+                       5.00000000E-01  0.00000000E+00  3.75000000E-01
+                       2.50000000E-01  2.50000000E-01  3.75000000E-01
+              kpt2     0.00000000E+00  0.00000000E+00  0.00000000E+00
+                       2.94117647E-02  0.00000000E+00  0.00000000E+00
+                       5.88235294E-02  0.00000000E+00  0.00000000E+00
+                       8.82352941E-02  0.00000000E+00  0.00000000E+00
+                       1.17647059E-01  0.00000000E+00  0.00000000E+00
+                       1.47058824E-01  0.00000000E+00  0.00000000E+00
+                       1.76470588E-01  0.00000000E+00  0.00000000E+00
+                       2.05882353E-01  0.00000000E+00  0.00000000E+00
+                       2.35294118E-01  0.00000000E+00  0.00000000E+00
+                       2.64705882E-01  0.00000000E+00  0.00000000E+00
+                       2.94117647E-01  0.00000000E+00  0.00000000E+00
+                       3.23529412E-01  0.00000000E+00  0.00000000E+00
+                       3.52941176E-01  0.00000000E+00  0.00000000E+00
+                       3.82352941E-01  0.00000000E+00  0.00000000E+00
+                       4.11764706E-01  0.00000000E+00  0.00000000E+00
+                       4.41176471E-01  0.00000000E+00  0.00000000E+00
+                       4.70588235E-01  0.00000000E+00  0.00000000E+00
+                       5.00000000E-01  0.00000000E+00  0.00000000E+00
+                       4.83333333E-01  3.33333333E-02  0.00000000E+00
+                       4.66666667E-01  6.66666667E-02  0.00000000E+00
+                       4.50000000E-01  1.00000000E-01  0.00000000E+00
+                       4.33333333E-01  1.33333333E-01  0.00000000E+00
+                       4.16666667E-01  1.66666667E-01  0.00000000E+00
+                       4.00000000E-01  2.00000000E-01  0.00000000E+00
+                       3.83333333E-01  2.33333333E-01  0.00000000E+00
+                       3.66666667E-01  2.66666667E-01  0.00000000E+00
+                       3.50000000E-01  3.00000000E-01  0.00000000E+00
+                       3.33333333E-01  3.33333333E-01  0.00000000E+00
+                       3.16666667E-01  3.16666667E-01  0.00000000E+00
+                       3.00000000E-01  3.00000000E-01  0.00000000E+00
+                       2.83333333E-01  2.83333333E-01  0.00000000E+00
+                       2.66666667E-01  2.66666667E-01  0.00000000E+00
+                       2.50000000E-01  2.50000000E-01  0.00000000E+00
+                       2.33333333E-01  2.33333333E-01  0.00000000E+00
+                       2.16666667E-01  2.16666667E-01  0.00000000E+00
+                       2.00000000E-01  2.00000000E-01  0.00000000E+00
+                       1.83333333E-01  1.83333333E-01  0.00000000E+00
+                       1.66666667E-01  1.66666667E-01  0.00000000E+00
+                       1.50000000E-01  1.50000000E-01  0.00000000E+00
+                       1.33333333E-01  1.33333333E-01  0.00000000E+00
+                       1.16666667E-01  1.16666667E-01  0.00000000E+00
+                       1.00000000E-01  1.00000000E-01  0.00000000E+00
+                       8.33333333E-02  8.33333333E-02  0.00000000E+00
+                       6.66666667E-02  6.66666667E-02  0.00000000E+00
+                       5.00000000E-02  5.00000000E-02  0.00000000E+00
+                       3.33333333E-02  3.33333333E-02  0.00000000E+00
+                       1.66666667E-02  1.66666667E-02  0.00000000E+00
+                       0.00000000E+00  0.00000000E+00  0.00000000E+00
+           kptopt1          1
+           kptopt2         -3
+         kptrlatt        4    0    0      0    4    0      0    0    4
+          kptrlen1     2.40816296E+01
+          kptrlen2     3.00000000E+01
+P           mkmem1          8
+P           mkmem2         48
+            natom           3
+            nband1         10
+            nband2         16
+           nbdbuf1          0
+           nbdbuf2          2
+           ndtset           2
+            ngfft          24      24      72
+             nkpt1          8
+             nkpt2         48
+            nstep          10
+             nsym          12
+           ntypat           2
+              occ      2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  0.000000
+            rprim      1.0000000000E+00  0.0000000000E+00  0.0000000000E+00
+                      -5.0000000000E-01  8.6602540378E-01  0.0000000000E+00
+                       0.0000000000E+00  0.0000000000E+00  1.0000000000E+00
+           shiftk1     0.00000000E+00  0.00000000E+00  5.00000000E-01
+           shiftk2     5.00000000E-01  5.00000000E-01  5.00000000E-01
+          spgroup         187
+           symrel      1  0  0   0  1  0   0  0  1       0 -1  0  -1  0  0   0  0 -1
+                      -1 -1  0   1  0  0   0  0 -1      -1  0  0   1  1  0   0  0  1
+                       0  1  0  -1 -1  0   0  0  1       1  1  0   0 -1  0   0  0 -1
+                       1  0  0   0  1  0   0  0 -1       0 -1  0  -1  0  0   0  0  1
+                      -1 -1  0   1  0  0   0  0  1      -1  0  0   1  1  0   0  0 -1
+                       0  1  0  -1 -1  0   0  0 -1       1  1  0   0 -1  0   0  0  1
+           toldfe1     1.00000000E-06 Hartree
+           toldfe2     0.00000000E+00 Hartree
+           tolwfr1     0.00000000E+00
+           tolwfr2     1.00000000E-12
+            typat      1  2  2
+              wtk1       0.03125    0.18750    0.09375    0.18750    0.03125    0.18750
+                         0.09375    0.18750
+              wtk2       1.00000    1.00000    1.00000    1.00000    1.00000    1.00000
+                         1.00000    1.00000    1.00000    1.00000    1.00000    1.00000
+                         1.00000    1.00000    1.00000    1.00000    1.00000    1.00000
+                         1.00000    1.00000    1.00000    1.00000    1.00000    1.00000
+                         1.00000    1.00000    1.00000    1.00000    1.00000    1.00000
+                         1.00000    1.00000    1.00000    1.00000    1.00000    1.00000
+                         1.00000    1.00000    1.00000    1.00000    1.00000    1.00000
+                         1.00000    1.00000    1.00000    1.00000    1.00000    1.00000
+           xangst      0.0000000000E+00  0.0000000000E+00  0.0000000000E+00
+                       1.5929311941E+00  9.1967925372E-01  1.6484034495E+00
+                       1.5929311941E+00  9.1967925372E-01 -1.6484034495E+00
+            xcart      0.0000000000E+00  0.0000000000E+00  0.0000000000E+00
+                       3.0102037054E+00  1.7379419196E+00  3.1150310760E+00
+                       3.0102037054E+00  1.7379419196E+00 -3.1150310760E+00
+             xred      0.0000000000E+00  0.0000000000E+00  0.0000000000E+00
+                       6.6666666667E-01  3.3333333333E-01  1.6298478192E-01
+                       6.6666666667E-01  3.3333333333E-01 -1.6298478192E-01
+            znucl       42.00000   16.00000
+
+================================================================================
+
+ chkinp: Checking input parameters for consistency, jdtset=   1.
+
+ chkinp: Checking input parameters for consistency, jdtset=   2.
+
+================================================================================
+== DATASET  1 ==================================================================
+-   nproc =    1
+
+ Exchange-correlation functional for the present dataset will be:
+  LDA: new Teter (4/93) with spin-polarized option - ixc=1
+ Citation for XC functional:
+  S. Goedecker, M. Teter, J. Huetter, PRB 54, 1703 (1996)
+
+ Real(R)+Recip(G) space primitive vectors, cartesian coordinates (Bohr,Bohr^-1):
+ R(1)=  6.0204074  0.0000000  0.0000000  G(1)=  0.1661017  0.0958989  0.0000000
+ R(2)= -3.0102037  5.2138258  0.0000000  G(2)=  0.0000000  0.1917977  0.0000000
+ R(3)=  0.0000000  0.0000000 19.1124045  G(3)=  0.0000000  0.0000000  0.0523220
+ Unit cell volume ucvol=  5.9992605E+02 bohr^3
+ Angles (23,13,12)=  9.00000000E+01  9.00000000E+01  1.20000000E+02 degrees
+
+ getcut: wavevector=  0.0000  0.0000  0.0000  ngfft=  24  24  72
+         ecut(hartree)=     17.000   => boxcut(ratio)=   2.02968
+
+--- Pseudopotential description ------------------------------------------------
+- pspini: atom type   1  psp file is ./42mo.pspnc
+- pspatm: opening atomic psp file    ./42mo.pspnc
+-  Troullier-Martins psp for element  Mo        Thu Oct 27 17:40:28 EDT 1994
+- 42.00000   6.00000    940714                znucl, zion, pspdat
+    1    1    2    0      2001   0.00000      pspcod,pspxc,lmax,lloc,mmax,r2well
+    0   4.276   7.035    0   2.8930462        l,e99.0,e99.9,nproj,rcpsp
+   0.00000000   0.00000000   0.00000000   0.00000000     rms, ekb1, ekb2, epsatm
+    1   1.499   2.758    1   3.1973167        l,e99.0,e99.9,nproj,rcpsp
+   0.00000000   0.00000000   0.00000000   0.00000000     rms, ekb1, ekb2, epsatm
+    2  11.774  15.725    1   2.1974630        l,e99.0,e99.9,nproj,rcpsp
+   0.00000000   0.00000000   0.00000000   0.00000000     rms, ekb1, ekb2, epsatm
+    2.63204696240783    0.28531456933550    4.53995799271176   rchrg,fchrg,qchrg
+ pspatm: epsatm=   89.23647829
+         --- l  ekb(1:nproj) -->
+             1    0.432305
+             2   -4.457359
+ pspatm: atomic psp has been read  and splines computed
+
+- pspini: atom type   2  psp file is ./S.psp8
+- pspatm: opening atomic psp file    ./S.psp8
+- S     ONCVPSP  r_core=  1.45  1.45  1.62
+- 16.00000   6.00000    151027                znucl, zion, pspdat
+    8   11    2    4       600   0.00000      pspcod,pspxc,lmax,lloc,mmax,r2well
+    5.99000000000000    6.00000000000000    0.00000000000000   rchrg,fchrg,qchrg
+     nproj     2     2     2
+extension_switch     1
+ pspatm: epsatm=    9.01629391
+         --- l  ekb(1:nproj) -->
+             0    6.687458    0.573856
+             1    3.355342    0.912754
+             2   -8.510942   -1.367258
+ pspatm: atomic psp has been read  and splines computed
+
+   1.93084319E+03                                ecore*ucvol(ha*bohr**3)
+--------------------------------------------------------------------------------
+
+_setup2: Arith. and geom. avg. npw (full set) are    2009.969    2009.937
+
+================================================================================
+
+     iter   Etot(hartree)      deltaE(h)  residm     vres2
