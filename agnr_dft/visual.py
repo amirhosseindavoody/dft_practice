@@ -7,7 +7,7 @@ plt.ion() # enables interactive mode for ploting. No plt.show() is needed!
 
 
 # directory = "./"+"spin_up_band.dat"
-filename = "mos2_7.out.dat"
+filename = "band.dat"
 
 count =0
 arr1 = []
@@ -21,17 +21,17 @@ arr8 = []
 with open(filename) as fp:
 	for line in fp:
 
-		if (count % 5 == 1):
+		if (count % 6 == 1):
 			arr1.append([float(x) for x in line.split()])
-		if (count % 5 == 2):
+		if (count % 6 == 2):
 			arr2.append([float(x) for x in line.split()])
-		if (count % 5 == 3):
+		if (count % 6 == 3):
 			arr3.append([float(x) for x in line.split()])
-		if (count % 5 == 4):
+		if (count % 6 == 4):
 			arr4.append([float(x) for x in line.split()])
-		# if (count % 9 == 5):
-		# 	arr5.append([float(x) for x in line.split()])
-		# if (count % 9 == 6):
+		if (count % 6 == 5):
+			arr5.append([float(x) for x in line.split()])
+		# if (count % 6 == 6):
 		# 	arr6.append([float(x) for x in line.split()])
 		# if (count % 9 == 7):
 		# 	arr7.append([float(x) for x in line.split()])
@@ -60,8 +60,8 @@ for i in range(0,data3.shape[0]):
 	ax.plot(data3[i,:], linestyle="solid", linewidth=2, marker="")
 for i in range(0,data4.shape[0]):
 	ax.plot(data4[i,:], linestyle="solid", linewidth=2, marker="")
-# for i in range(0,data5.shape[0]):
-# 	ax.plot(data5[i,:], linestyle="solid", linewidth=2, marker="")
+for i in range(0,data5.shape[0]):
+	ax.plot(data5[i,:], linestyle="solid", linewidth=2, marker="")
 # for i in range(0,data6.shape[0]):
 # 	ax.plot(data6[i,:], linestyle="solid", linewidth=2, marker="")
 # for i in range(0,data7.shape[0]):
