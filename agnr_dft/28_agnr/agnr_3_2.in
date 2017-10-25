@@ -6,19 +6,20 @@ ionmov  2
 ntime  10   # Gives the number of molecular dynamics time steps or Broyden structural optimization steps to be done if ionmov is non-zero.
 tolmxf  5.0d-4  # Stopping criterion for the geometry optimization : when the residual forces are less than tolmxf, the Broyden algorithm can stop 
 
-optcell 0   # only move the ion positions and do not relax the cell size
-dilatmx 1.05
-ecutsm  0.5
+# optcell 0   # only move the ion positions and do not relax the cell size
+# dilatmx 1.05
+# ecutsm  0.5
 
 #usual self-consistent calculation
 kptopt 1           # Option for the automatic generation of k points,
                    # taking into account the symmetry
 nshiftk 1
-shiftk  0.0 0.0 0.0  # These shifts will be the same for all grids
+shiftk  0.5 0.0 0.0  # These shifts will be the same for all grids
 
 ngkpt   16 1 1  
 # prtden  1         # Print the density, for use by dataset 2
-toldfe  1.0d-6    # This value is way too large for most realistic studies of materials
+# toldfe  1.0d-6    # This value is way too large for most realistic studies of materials
+toldff  5.0d-5      # This value is way too large for most realistic studies of materials
 
 #Definition of the unit cell
 acell  4.26  56         30 angstrom      
@@ -26,46 +27,51 @@ rprim  1.0   0.0        0.0                           # In lessons 1 and 2, thes
        0.0   1.0        0.0                           # (to be scaled by acell) were 1 0 0  0 1 0  0 0 1 
        0.0   0.0        1.0                           # that is, the default.
 
+
 #Definition of the atom types
-ntypat 1          # There is only one type of atom
-znucl 6           # The keyword "znucl" refers to the atomic number of the 
+ntypat 2          # There is only one type of atom
+znucl 1 6           # The keyword "znucl" refers to the atomic number of the 
                   # possible type(s) of atom. The pseudopotential(s) 
                   # mentioned in the "files" file must correspond
                   # to the type(s) of atom. 
                          
 
 #Definition of the atoms
-natom 28           # total number of atoms
-typat 28*1         # atom types
+natom 32           # total number of atoms
+typat 4*1 28*2         # atom types
 xangst             # Absolute coordinates in Angestrom
-    0.00000    0.00000    0.00000
-    2.13000    1.22976    0.00000
-    0.00000    2.45951    0.00000
-    2.13000    3.68927    0.00000
-    0.00000    4.91902    0.00000
-    2.13000    6.14878    0.00000
-    0.00000    7.37854    0.00000
-    2.13000    8.60829    0.00000
-    0.00000    9.83805    0.00000
-    2.13000   11.06780    0.00000
-    0.00000   12.29756    0.00000
-    2.13000   13.52732    0.00000
-    0.00000   14.75707    0.00000
-    2.13000   15.98683    0.00000
-    1.42000    0.00000    0.00000
-   -0.71000    1.22976    0.00000
-    1.42000    2.45951    0.00000
-   -0.71000    3.68927    0.00000
-    1.42000    4.91902    0.00000
-   -0.71000    6.14878    0.00000
-    1.42000    7.37854    0.00000
-   -0.71000    8.60829    0.00000
-    1.42000    9.83805    0.00000
-   -0.71000   11.06780    0.00000
-    1.42000   12.29756    0.00000
-   -0.71000   13.52732    0.00000
-    1.42000   14.75707    0.00000
-   -0.71000   15.98683    0.00000
+      -7.2575603468E-01 -1.2392927615E+00  3.0934891077E-31
+       2.1451141551E+00 -1.2392927615E+00  2.0231805265E-31
+       3.7766367081E-03  1.7137010487E+01  3.0934891077E-31
+       1.4032941447E+00  1.7137010487E+01  2.0231805265E-31
+       9.4480947885E-02  8.9047015218E-02  3.3087719839E-30
+       2.1467100117E+00  1.2114094373E+00  3.2876387776E-30
+       2.2474140140E-03  2.4450942019E+00  3.3662712554E-30
+       2.1326558578E+00  3.6746962043E+00  3.3331536151E-30
+       2.2274853768E-04  4.9084018295E+00 -1.0717608007E-29
+       2.1289059601E+00  6.1407958192E+00  3.3510383966E-30
+       6.6686262080E-04  7.3755370741E+00 -1.8997665017E-29
+       2.1306797129E+00  8.6113873994E+00  3.3269550165E-30
+      -1.0896084052E-03  9.8461101988E+00  3.3087719839E-30
+       2.1302304040E+00  1.1078418033E+01  3.3087719839E-30
+       2.6346662490E-03  1.2312051760E+01  3.3076165214E-30
+       2.1322604989E+00  1.3541680949E+01  3.3259735935E-30
+       1.6724221946E-02  1.4775452353E+01  3.3087719839E-30
+       2.2245136424E+00  1.5897717726E+01  3.3087719839E-30
+       1.3255190521E+00  8.9047015218E-02  3.3087719839E-30
+      -7.2671001173E-01  1.2114094373E+00  4.7228880142E-30
+       1.4177525860E+00  2.4450942019E+00  3.2905889513E-30
+      -7.1265585784E-01  3.6746962043E+00  3.3087719839E-30
+       1.4197772515E+00  4.9084018295E+00  3.3087719839E-30
+      -7.0890596013E-01  6.1407958192E+00 -8.0913153231E-30
+       1.4193331374E+00  7.3755370741E+00  3.3087719839E-30
+      -7.1067971294E-01  8.6113873994E+00  3.3087719839E-30
+       1.4210896084E+00  9.8461101988E+00 -3.1852524742E-29
+      -7.1023040402E-01  1.1078418033E+01  3.3087719839E-30
+       1.4173653338E+00  1.2312051760E+01  3.3204566425E-30
+      -7.1226049893E-01  1.3541680949E+01  1.8906280678E-29
+       1.4032757781E+00  1.4775452353E+01  3.3087719839E-30
+      -8.0451364243E-01  1.5897717726E+01 -2.3585012180E-29
 
 
 #Definition of the planewave basis set
@@ -74,7 +80,7 @@ ecut  19
                   
 
 #Definition of the SCF procedure
-nstep 10          # Maximal number of SCF cycles
+nstep 20          # Maximal number of SCF cycles
 diemac 10.0       # Although this is not mandatory, it is worth to
                   # precondition the SCF cycle. The model dielectric
                   # function used as the standard preconditioner

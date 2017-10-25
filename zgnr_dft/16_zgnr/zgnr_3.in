@@ -1,0 +1,103 @@
+# GOAL: Optimize acell, rprim, and ion positions
+
+#Optimization of the lattice parameters
+
+ionmov  2
+ntime   5   # Gives the number of molecular dynamics time steps or Broyden structural optimization steps to be done if ionmov is non-zero.
+tolmxf  5.0d-4  # Stopping criterion for the geometry optimization : when the residual forces are less than tolmxf, the Broyden algorithm can stop 
+
+optcell 0   # only move the ion positions and do not relax the cell size
+dilatmx 1.05
+ecutsm  0.5
+
+#usual self-consistent calculation
+kptopt 1           # Option for the automatic generation of k points,
+                   # taking into account the symmetry
+nshiftk 1
+shiftk  0.5 0.0 0.0  # These shifts will be the same for all grids
+
+ngkpt   10 1 1  
+# prtden  1         # Print the density, for use by dataset 2
+toldfe  1.0d-6    # This value is way too large for most realistic studies of materials
+
+#Definition of the unit cell
+acell  2.459512147   38   20 angstrom      
+rprim  1.0   0.0        0.0                           # In lessons 1 and 2, these primitive vectors 
+       0.0   1.0        0.0                           # (to be scaled by acell) were 1 0 0  0 1 0  0 0 1 
+       0.0   0.0        1.0                           # that is, the default.
+
+#Definition of the atom types
+ntypat 2          # There is only one type of atom
+znucl 1 6           # The keyword "znucl" refers to the atomic number of the 
+                  # possible type(s) of atom. The pseudopotential(s) 
+                  # mentioned in the "files" file must correspond
+                  # to the type(s) of atom. 
+
+#Definition of the atoms
+natom 18               # There are two atoms
+typat 1*1 16*2  1*1       # determine atom types
+xangst     
+            0.00000  -1.42000  0.00
+            0.00000  0.00000  0.00
+            -1.22976  2.13000  0.00
+            0.00000  4.26000  0.00
+            -1.22976  6.39000  0.00
+            0.00000  8.52000  0.00
+            -1.22976  10.65000  0.00
+            0.00000  12.78000  0.00
+            -1.22976  14.91000  0.00
+            -1.22976  0.71000  0.00
+            0.00000  2.84000  0.00
+            -1.22976  4.97000  0.00
+            0.00000  7.10000  0.00
+            -1.22976  9.23000  0.00
+            0.00000  11.36000  0.00
+            -1.22976  13.49000  0.00
+            0.00000  15.62000  0.00
+            0.00000  17.04000  0.00
+
+
+#########################################
+# spin properties
+
+nspinor 1
+nsppol 2
+nspden 2
+
+# could be 3, 4, 5 ,6, 7 but not 2
+occopt 7
+
+spinat
+    0 0 0.0
+    0 0 1.0
+    0 0 1.0
+    0 0 0.0
+    0 0 0.0
+    0 0 0.0
+    0 0 0.0
+    0 0 0.0
+    0 0 0.0
+    0 0 0.0
+    0 0 0.0
+    0 0 0.0
+    0 0 0.0
+    0 0 0.0
+    0 0 0.0
+    0 0 -1.0
+    0 0 -1.0
+    0 0 0.0
+
+
+#Definition of the planewave basis set
+ecut  14
+
+                  
+
+#Definition of the SCF procedure
+nstep 10          # Maximal number of SCF cycles
+diemac 10.0       # Although this is not mandatory, it is worth to
+                  # precondition the SCF cycle. The model dielectric
+                  # function used as the standard preconditioner
+                  # is described in the "dielng" input variable section.
+                  # Here, we follow the prescription for bulk silicon.
+

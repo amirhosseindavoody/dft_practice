@@ -7,9 +7,9 @@ ndtset 2
 kptopt1 1          # Option for the automatic generation of k points,
                    # taking into account the symmetry
 nshiftk1 1
-shiftk1  0.0 0.0 0.0  # These shifts will be the same for all grids
+shiftk1  0.5 0.0 0.0  # These shifts will be the same for all grids
 
-ngkpt1  4 1 1  
+ngkpt1   16 1 1  
 prtden1  1         # Print the density, for use by dataset 2
 toldfe1  1.0d-6    # This value is way too large for most realistic studies of materials
 
@@ -18,10 +18,10 @@ toldfe1  1.0d-6    # This value is way too large for most realistic studies of m
 iscf2    -2
 getden2  -1
 kptopt2  -1
-nband2   36
+nband2   70
 ndivk2   20      # Number of the Brillouin segments
 kptbounds2  0.0  0.0  0.0 # Gamma point
-            1.0  0.0  0.0 # Gamma point in another cell.
+            0.5  0.0  0.0 # Gamma point in another cell.
 tolwfr2  1.0d-12
 enunit2  1             # Will output the eigenenergies in eV
 
@@ -29,46 +29,65 @@ enunit2  1             # Will output the eigenenergies in eV
 ###############################################################################################
 
 #Definition of the unit cell
-acell      8.0465943961E+00  7.1777133110E+01  3.7777438479E+01 Bohr      
+acell  4.26  56         30 angstrom      
 rprim  1.0   0.0        0.0                           # In lessons 1 and 2, these primitive vectors 
        0.0   1.0        0.0                           # (to be scaled by acell) were 1 0 0  0 1 0  0 0 1 
        0.0   0.0        1.0                           # that is, the default.
 
+
 #Definition of the atom types
-ntypat 1          # There is only one type of atom
-znucl 6           # The keyword "znucl" refers to the atomic number of the 
+ntypat 2          # There is only one type of atom
+znucl  1 6           # The keyword "znucl" refers to the atomic number of the 
                   # possible type(s) of atom. The pseudopotential(s) 
                   # mentioned in the "files" file must correspond
                   # to the type(s) of atom. 
+                         
 
 #Definition of the atoms
-natom 16           # There are two atoms
-typat 16*1         # They both are of type 1, that is, Silicon.
-xangst      8.2043157861E-02  9.6189362538E-02 -3.1418016479E-30
-           2.1451141551E+00  1.2392927615E+00  2.0231805265E-31
-           1.7693839959E-03  2.4638675980E+00  2.0231805265E-31
-           2.1328287017E+00  3.6861221294E+00  2.0231805265E-31
-           3.7766367081E-03  4.9182501816E+00  2.0231805265E-31
-           2.1307894660E+00  6.1405112971E+00  2.0231805265E-31
-           1.6063975716E-02  7.3651424662E+00  2.0231805265E-31
-           2.2108396379E+00  8.5082294504E+00  2.0231805265E-31
-           1.3373149625E+00  9.6189362538E-02  2.0231805265E-31
-          -7.2575603468E-01  1.2392927615E+00  3.0934891077E-31
-           1.4175887364E+00  2.4638675980E+00  2.0231805265E-31
-          -7.1347058130E-01  3.6861221294E+00  2.0231805265E-31
-           1.4155814837E+00  4.9182501816E+00  2.0231805265E-31
-          -7.1143134563E-01  6.1405112971E+00  2.0231805265E-31
-           1.4032941447E+00  7.3651424662E+00  2.0231805265E-31
-          -7.9148151748E-01  8.5082294504E+00  2.0231805265E-31
+natom 32           # total number of atoms
+typat 4*1 28*2         # atom types
+xcart             # Absolute coordinates in Angestrom
+ -1.06507280686607E+00 -1.89298175936779E+00  5.84584720861778E-31
+  3.74779910702698E+00 -1.89320501961703E+00  3.82325711247238E-31
+ -2.76292045401120E-01  3.20483890774129E+01  5.84584720861778E-31
+  2.94661109506536E+00  3.20446768600130E+01  3.82325711247238E-31
+  6.04966809308660E-02 -1.34232220713345E-01  6.25267288573570E-30
+  4.00424719046698E+00  2.20770608610384E+00  6.21273691351893E-30
+ -7.89485705147379E-03  4.58243114438404E+00  6.36133076171114E-30
+  4.02999707212371E+00  6.94606663870634E+00  6.29874749137672E-30
+ -2.17427120489966E-04  9.28324957505023E+00 -2.02533439328523E-29
+  4.02357738676409E+00  1.16104915094942E+01  6.33254483035822E-30
+  1.25471709227149E-03  1.39400922763809E+01 -3.59003840464323E-29
+  4.02654080453960E+00  1.62701135945697E+01  6.28703383761504E-30
+ -1.42010415197954E-03  1.85995208475103E+01  6.25267288573570E-30
+  4.02459973267593E+00  2.09253110949342E+01  6.25267288573570E-30
+  5.07195376567542E-03  2.32587909303227E+01  6.25048937805388E-30
+  4.01739183478377E+00  2.56151076961282E+01  6.28517921692452E-30
+ -2.10086452769855E-02  2.79736811093103E+01  6.25267288573570E-30
+  4.08398322805106E+00  3.02860313362836E+01  6.25267288573570E-30
+  2.62258530193590E+00 -1.34251246478142E-01  6.25267288573570E-30
+ -1.32096828702851E+00  2.20773957033968E+00  8.92496490312612E-30
+  2.69128858558422E+00  4.58243160673576E+00  6.21831193385637E-30
+ -1.34658361440460E+00  6.94607235368956E+00  6.25267288573570E-30
+  2.68362779962424E+00  9.28324899967734E+00  6.25267288573570E-30
+ -1.34016586186657E+00  1.16104977720817E+01 -1.52903700154801E-29
+  2.68215499328354E+00  1.39400911799722E+01  6.25267288573570E-30
+ -1.34313288246845E+00  1.62701390362857E+01  6.25267288573570E-30
+  2.68482944529534E+00  1.85994815761820E+01 -6.01925484033439E-29
+ -1.34119884571919E+00  2.09254257907543E+01  6.25267288573570E-30
+  2.67819303339005E+00  2.32586580095543E+01  6.27475369044597E-30
+ -1.33477776214793E+00  2.56151192252925E+01  3.57276926728875E-29
+  2.70134242651802E+00  2.79732580117617E+01  6.25267288573570E-30
+ -1.40792716925725E+00  3.02857008856722E+01 -4.45692138609722E-29
 
 
 #Definition of the planewave basis set
-ecut  14
+ecut  19
 
                   
 
 #Definition of the SCF procedure
-nstep 10          # Maximal number of SCF cycles
+nstep  20         # Maximal number of SCF cycles
 diemac 10.0       # Although this is not mandatory, it is worth to
                   # precondition the SCF cycle. The model dielectric
                   # function used as the standard preconditioner

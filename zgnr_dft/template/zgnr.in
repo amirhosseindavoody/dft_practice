@@ -1,0 +1,208 @@
+# GOAL: Calculate the band structure by doing a SCF loop first and then moving in the brillouine zone
+
+
+ndtset 2
+
+# ionmov1  2
+# ntime1  4   # Gives the number of molecular dynamics time steps or Broyden structural optimization steps to be done if ionmov is non-zero.
+# tolmxf1  5.0d-4  # Stopping criterion for the geometry optimization : when the residual forces are less than tolmxf, the Broyden algorithm can stop 
+
+#Dataset 1 : usual self-consistent calculation
+kptopt1 1          # Option for the automatic generation of k points,
+                   # taking into account the symmetry
+nshiftk1 1
+shiftk1  0.0 0.0 0.5  # These shifts will be the same for all grids
+
+ngkpt1   1 1 15  
+prtden1  1         # Print the density, for use by dataset 2
+toldfe1  1.0d-6    # This value is way too large for most realistic studies of materials
+
+
+
+#Dataset 2 : the band structure
+iscf2    -2
+getden2  -1
+kptopt2  -1
+nband2   40
+ndivk2   15               # Number of the Brillouin segments
+kptbounds2  0.0  0.0  0.0 # Gamma point
+            0.0  0.0  0.5 # Gamma point in another cell.
+tolwfr2  1.0d-12
+enunit2  1             # Will output the eigenenergies in eV
+
+
+###############################################################################################
+
+#Definition of the unit cell
+acell    2.8345891993E+01  6.6140414651E+01  4.6652108581E+00 Bohr
+angdeg  90.00  90.00  90.00
+
+#Definition of the atom types
+ntypat 2          
+znucl  6 1           
+
+#Definition of the atoms
+natom 18
+typat 2 16*1 2     
+
+xangst    2.1924687653E-06 -8.9347127982E+00  1.2253261414E+00
+         -6.3335522880E-06 -7.8374663590E+00  1.2252914015E+00
+         -1.2466279888E-05 -7.1553103483E+00 -9.0703680259E-03
+         -2.4889138031E-05 -5.7095725410E+00 -9.0145181006E-03
+         -3.0871693702E-05 -5.0013301057E+00  1.2253608862E+00
+         -4.2554247256E-05 -3.5682760068E+00  1.2253671991E+00
+         -4.7331677516E-05 -2.8569447694E+00 -8.9956653736E-03
+         -5.1814279312E-05 -1.4267271463E+00 -8.9761860125E-03
+         -5.0440741501E-05 -7.1470430595E-01  1.2253949192E+00
+         -3.9645629859E-05  7.1487653105E-01  1.2253974953E+00
+         -3.1339882842E-05  1.4268988477E+00 -8.9725857920E-03
+         -1.2927341998E-05  2.8571142755E+00 -8.9900137798E-03
+         -3.8630326290E-06  3.5684443157E+00  1.2253733133E+00
+          1.1398425826E-05  5.0014956819E+00  1.2253679131E+00
+          1.7259567710E-05  5.7097392667E+00 -9.0075717678E-03
+          2.3882826847E-05  7.1554797931E+00 -9.0650236494E-03
+          2.4511032039E-05  7.8376359584E+00  1.2252964978E+00
+          2.2583175635E-05  8.9348828407E+00  1.2253293079E+00
+
+#Definition of the planewave basis set
+#usepaw    1
+pawovlp   10
+pawecutdg 40 
+
+#Definition of the planewave basis set
+ecut  14
+boxcutmin 1.5
+
+#########################################
+# spin properties
+
+nspinor 1
+nspden  2
+nsppol  2
+
+spinat
+ 0 0 1.0
+ 0 0 0.0
+ 0 0 0.0
+ 0 0 0.0
+ 0 0 0.0
+ 0 0 0.0
+ 0 0 0.0
+ 0 0 0.0
+ 0 0 0.0
+ 0 0 0.0
+ 0 0 0.0
+ 0 0 0.0
+ 0 0 0.0
+ 0 0 0.0
+ 0 0 0.0
+ 0 0 0.0
+ 0 0 0.0
+ 0 0 -1.0
+
+nstep     80
+occopt     7
+iscf      17
+npulayit   7
+ixc       9
+tsmear     0.01
+tolvrs     1.0d-6
+diemac    10
+#iprcel  45
+#diemix   1.0     
+
+                  
+
+
+# # Graphene 
+# # Convergence with respect to ecut 
+
+# #Optimization of the lattice parameters
+# optcell    6
+# ionmov     2
+# ecutsm     0.5
+# dilatmx    1.15
+# strfact    200
+# tolmxf     5.0d-5
+# ntime      80
+
+# #Definition of the k-point grids
+# kptopt 1          
+# nshiftk 1
+# shiftk  0.0 0.0 0.0  
+
+# ngkpt  1  1  30 
+
+# #Definition of the unit cell
+# acell    2.8345891993E+01  6.6140414651E+01  4.6652108581E+00 Bohr
+# angdeg  90.00  90.00  90.00
+
+# #Definition of the atom types
+# ntypat 2          
+# znucl  6 1           
+
+# #Definition of the atoms
+# natom 18
+# typat 2 16*1 2     
+
+# xangst    2.1924687653E-06 -8.9347127982E+00  1.2253261414E+00
+#          -6.3335522880E-06 -7.8374663590E+00  1.2252914015E+00
+#          -1.2466279888E-05 -7.1553103483E+00 -9.0703680259E-03
+#          -2.4889138031E-05 -5.7095725410E+00 -9.0145181006E-03
+#          -3.0871693702E-05 -5.0013301057E+00  1.2253608862E+00
+#          -4.2554247256E-05 -3.5682760068E+00  1.2253671991E+00
+#          -4.7331677516E-05 -2.8569447694E+00 -8.9956653736E-03
+#          -5.1814279312E-05 -1.4267271463E+00 -8.9761860125E-03
+#          -5.0440741501E-05 -7.1470430595E-01  1.2253949192E+00
+#          -3.9645629859E-05  7.1487653105E-01  1.2253974953E+00
+#          -3.1339882842E-05  1.4268988477E+00 -8.9725857920E-03
+#          -1.2927341998E-05  2.8571142755E+00 -8.9900137798E-03
+#          -3.8630326290E-06  3.5684443157E+00  1.2253733133E+00
+#           1.1398425826E-05  5.0014956819E+00  1.2253679131E+00
+#           1.7259567710E-05  5.7097392667E+00 -9.0075717678E-03
+#           2.3882826847E-05  7.1554797931E+00 -9.0650236494E-03
+#           2.4511032039E-05  7.8376359584E+00  1.2252964978E+00
+#           2.2583175635E-05  8.9348828407E+00  1.2253293079E+00
+
+# #Definition of the planewave basis set
+# #usepaw    1
+# pawovlp   10
+# pawecutdg 40 
+
+# ecut  14
+
+# #Definition of the SCF procedure
+# nspinor 1
+# nspden  2
+# nsppol  2
+
+# spinat
+#  0 0 1.0
+#  0 0 0.0
+#  0 0 0.0
+#  0 0 0.0
+#  0 0 0.0
+#  0 0 0.0
+#  0 0 0.0
+#  0 0 0.0
+#  0 0 0.0
+#  0 0 0.0
+#  0 0 0.0
+#  0 0 0.0
+#  0 0 0.0
+#  0 0 0.0
+#  0 0 0.0
+#  0 0 0.0
+#  0 0 0.0
+#  0 0 -1.0
+
+# nstep     80
+# occopt     7
+# iscf      17
+# npulayit   7
+# ixc       11
+# tsmear     0.01
+# tolvrs     1.0d-6
+# diemac    10
+# #iprcel  45
+# #diemix   1.0     

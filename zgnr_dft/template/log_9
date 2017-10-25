@@ -1,0 +1,620 @@
+  ABINIT 8.4.3
+  
+  Give name for formatted input file: 
+zgnr.in
+  Give name for formatted output file:
+zgnr.out
+  Give root name for generic input files:
+zgnri
+  Give root name for generic output files:
+zgnro
+  Give root name for generic temporary files:
+zgnr
+
+--- !COMMENT
+src_file: isfile.F90
+src_line: 109
+message: |
+    Output file zgnr.out
+     already exists.
+...
+
+
+--- !COMMENT
+src_file: isfile.F90
+src_line: 133
+message: |
+    Renaming old zgnr.out to zgnr.out0006
+...
+
+
+.Version 8.4.3 of ABINIT 
+.(sequential version, prepared for a x86_64_linux_gnu5.4 computer) 
+
+.Copyright (C) 1998-2017 ABINIT group . 
+ ABINIT comes with ABSOLUTELY NO WARRANTY.
+ It is free software, and you are welcome to redistribute it
+ under certain conditions (GNU General Public License,
+ see ~abinit/COPYING or http://www.gnu.org/copyleft/gpl.txt).
+
+ ABINIT is a project of the Universite Catholique de Louvain,
+ Corning Inc. and other collaborators, see ~abinit/doc/developers/contributors.txt .
+ Please read ~abinit/doc/users/acknowledgments.html for suggested
+ acknowledgments of the ABINIT effort.
+ For more information, see http://www.abinit.org .
+
+.Starting date : Thu 31 Aug 2017.
+- ( at 11h43 )
+  
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+ === Build Information === 
+  Version       : 8.4.3
+  Build target  : x86_64_linux_gnu5.4
+  Build date    : 20170815
+
+ === Compiler Suite === 
+  C compiler       : gnu5.4
+  C++ compiler     : gnu5.4
+  Fortran compiler : gnu5.4
+  CFLAGS           :  -g -O2 -mtune=native -march=native
+  CXXFLAGS         :  -g -O2 -mtune=native -march=native
+  FCFLAGS          :  -g -ffree-line-length-none
+  FC_LDFLAGS       : 
+
+ === Optimizations === 
+  Debug level        : basic
+  Optimization level : standard
+  Architecture       : intel_xeon
+
+ === Multicore === 
+  Parallel build : no
+  Parallel I/O   : no
+  openMP support : no
+  GPU support    : no
+
+ === Connectors / Fallbacks === 
+  Connectors on : yes
+  Fallbacks on  : yes
+  DFT flavor    : none
+  FFT flavor    : none
+  LINALG flavor : netlib
+  MATH flavor   : none
+  TIMER flavor  : abinit
+  TRIO flavor   : none
+
+ === Experimental features === 
+  Bindings            : @enable_bindings@
+  Exports             : no
+  GW double-precision : no
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Default optimizations:
+   -O2 -mtune=native -march=native
+
+
+ Optimizations for 20_datashare:
+   -O0
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ CPP options activated during the build:
+
+                    CC_GNU                   CXX_GNU                    FC_GNU
+ 
+ HAVE_FC_ALLOCATABLE_DT...             HAVE_FC_ASYNC         HAVE_FC_BACKTRACE
+ 
+  HAVE_FC_COMMAND_ARGUMENT      HAVE_FC_COMMAND_LINE        HAVE_FC_CONTIGUOUS
+ 
+           HAVE_FC_CPUTIME              HAVE_FC_EXIT             HAVE_FC_FLUSH
+ 
+             HAVE_FC_GAMMA            HAVE_FC_GETENV   HAVE_FC_IEEE_EXCEPTIONS
+ 
+          HAVE_FC_INT_QUAD             HAVE_FC_IOMSG     HAVE_FC_ISO_C_BINDING
+ 
+  HAVE_FC_ISO_FORTRAN_2008        HAVE_FC_LONG_LINES        HAVE_FC_MOVE_ALLOC
+ 
+           HAVE_FC_PRIVATE         HAVE_FC_PROTECTED         HAVE_FC_STREAM_IO
+ 
+            HAVE_FC_SYSTEM          HAVE_FORTRAN2003        HAVE_LIBPAW_ABINIT
+ 
+      HAVE_LIBTETRA_ABINIT               HAVE_LINALG        HAVE_LINALG_SERIAL
+ 
+             HAVE_OS_LINUX         HAVE_TIMER_ABINIT              USE_MACROAVE
+ 
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+- input  file    -> zgnr.in
+- output file    -> zgnr.out
+- root for input  files -> zgnri
+- root for output files -> zgnro
+
+-instrng: 208 lines of input have been read from file zgnr.in
+
+
+ Please give name of formatted atomic psp file
+ iofn2 : for atom type 1, psp file is ../C.LDA_PW-JTH.xml
+
+ Please give name of formatted atomic psp file
+ iofn2 : for atom type 2, psp file is ../H.LDA_PW-JTH.xml
+- inpspheads : Reading pseudopotential header in XML form from ../C.LDA_PW-JTH.xml
+- inpspheads : Reading pseudopotential header in XML form from ../H.LDA_PW-JTH.xml
+
+ inpspheads: deduce mpsang = 2, n1xccc = 1.
+ invars1 : treat image number: 1
+ ingeo : use angdeg to generate rprim.
+
+ symlatt : the Bravais lattice is oP (primitive orthorhombic)
+  xangst is defined in input file
+ ingeo : takes atomic coordinates from input array xangst
+  symfind : exit, nsym=           1
+    symrel matrices, symafm and tnons are :
+   1       1   0   0     0   1   0     0   0   1       1      0.0000  0.0000  0.0000
+
+ symlatt : the Bravais lattice is oP (primitive orthorhombic)
+
+ symlatt : the Bravais lattice is oP (primitive orthorhombic)
+
+--- !COMMENT
+src_file: symbrav.F90
+src_line: 201
+message: |
+    The Bravais lattice determined only from the primitive
+    vectors, bravais(1)=  3, is more symmetric
+    than the real one, iholohedry=  1, obtained by taking into
+    account the atomic positions. Start deforming the primitive vector set.
+...
+
+
+ symlatt : the Bravais lattice is aP (primitive triclinic)
+ symspgr : spgroup=   1  P1   (=C1^1)
+ ingeo : angdeg(1:3)=   90.00000000   90.00000000   90.00000000
+ invars1 : treat image number: 1
+ ingeo : use angdeg to generate rprim.
+
+ symlatt : the Bravais lattice is oP (primitive orthorhombic)
+  xangst is defined in input file
+ ingeo : takes atomic coordinates from input array xangst
+  symfind : exit, nsym=           1
+    symrel matrices, symafm and tnons are :
+   1       1   0   0     0   1   0     0   0   1       1      0.0000  0.0000  0.0000
+
+ symlatt : the Bravais lattice is oP (primitive orthorhombic)
+
+ symlatt : the Bravais lattice is oP (primitive orthorhombic)
+
+--- !COMMENT
+src_file: symbrav.F90
+src_line: 201
+message: |
+    The Bravais lattice determined only from the primitive
+    vectors, bravais(1)=  3, is more symmetric
+    than the real one, iholohedry=  1, obtained by taking into
+    account the atomic positions. Start deforming the primitive vector set.
+...
+
+
+ symlatt : the Bravais lattice is aP (primitive triclinic)
+ symspgr : spgroup=   1  P1   (=C1^1)
+ ingeo : angdeg(1:3)=   90.00000000   90.00000000   90.00000000
+ invars2: take the default value of fband=  5.00000000E-01
+ chkneu : initialized the occupation numbers for occopt=    7
+    spin up   values :
+  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00
+  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00
+  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  0.00
+    spin down values :
+  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00
+  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00
+  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00  0.00  0.00
+ chkneu : initialized the occupation numbers for occopt=    7
+    spin up   values :
+  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00
+  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00
+  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00
+    spin down values :
+  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00
+  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00
+  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  0.00  0.00  0.00
+  0.00  0.00  0.00  0.00
+mpi_setup: mkmem  undefined in the input file.Use default mkmem  = nkpt
+ mpi_setup: With nkpt_me=8 and mkmem  = 8, ground state wf handled in core.
+mpi_setup: mkqmem undefined in the input file.Use default mkqmem = nkpt
+ mpi_setup: With nkpt_me=8 and mkqmem = 8, ground state wf handled in core.
+mpi_setup: mk1mem undefined in the input file.Use default mk1mem = nkpt
+ mpi_setup: With nkpt_me=8 and mk1mem = 8, ground state wf handled in core.
+getng is called for the coarse grid:
+ For input ecut=  1.400000E+01 best grid ngfft=      72     180      12
+       max ecut=  7.959660E+00
+
+ ==== FFT mesh ====
+  FFT mesh divisions ........................    72  180   12
+  Augmented FFT divisions ...................    73  181   12
+  FFT algorithm .............................   112
+  FFT cache size ............................    16
+ getmpw: optimal value of mpw= 22046
+getng is called for the fine grid:
+ Using supplied coarse mesh as initial guess.
+ For input ecut=  4.000000E+01 best grid ngfft=     125     288      20
+       max ecut=  2.267395E+01
+
+ ==== FFT mesh ====
+  FFT mesh divisions ........................   125  288   20
+  Augmented FFT divisions ...................   125  289   20
+  FFT algorithm .............................   112
+  FFT cache size ............................    16
+mpi_setup: mkmem  undefined in the input file.Use default mkmem  = nkpt
+ mpi_setup: With nkpt_me=16 and mkmem  = 16, ground state wf handled in core.
+mpi_setup: mkqmem undefined in the input file.Use default mkqmem = nkpt
+ mpi_setup: With nkpt_me=16 and mkqmem = 16, ground state wf handled in core.
+mpi_setup: mk1mem undefined in the input file.Use default mk1mem = nkpt
+ mpi_setup: With nkpt_me=16 and mk1mem = 16, ground state wf handled in core.
+getng is called for the coarse grid:
+ For input ecut=  1.400000E+01 best grid ngfft=      72     180      12
+       max ecut=  7.959660E+00
+
+ ==== FFT mesh ====
+  FFT mesh divisions ........................    72  180   12
+  Augmented FFT divisions ...................    73  181   12
+  FFT algorithm .............................   112
+  FFT cache size ............................    16
+ getmpw: optimal value of mpw= 22062
+getng is called for the fine grid:
+ Using supplied coarse mesh as initial guess.
+ For input ecut=  4.000000E+01 best grid ngfft=     125     288      20
+       max ecut=  2.267395E+01
+
+ ==== FFT mesh ====
+  FFT mesh divisions ........................   125  288   20
+  Augmented FFT divisions ...................   125  289   20
+  FFT algorithm .............................   112
+  FFT cache size ............................    16
+
+ DATASET    1 : space group P1 (#  1); Bravais aP (primitive triclinic)
+
+ getdim_nloc : deduce lmnmax  =   8, lnmax  =   4,
+                      lmnmaxso=   8, lnmaxso=   4.
+memory : analysis of memory needs
+================================================================================
+ Values of the parameters that define the memory need for DATASET  1.
+     intxc =       0    ionmov =       0      iscf =      17    lmnmax =       8
+     lnmax =       4     mgfft =     180  mpssoang =       2    mqgrid =   18831
+     natom =      18  nloc_mem =       2    nspden =       2   nspinor =       1
+    nsppol =       2      nsym =       1    n1xccc =       1    ntypat =       2
+    occopt =       7   xclevel =       1
+-    mband =          42        mffmem =           1         mkmem =           8
+       mpw =       22046          nfft =      155520          nkpt =           8
+ PAW method is used; the additional fine FFT grid is defined by:
+   mgfftf=       288    nfftf =    720000
+================================================================================
+P This job should need less than                     465.384 Mbytes of memory.
+  Rough estimation (10% accuracy) of disk space for files :
+_ WF disk file :    226.060 Mbytes ; DEN or POT disk file :     10.988 Mbytes.
+================================================================================
+
+ Biggest array : cg(disk), with    226.0596 MBytes.
+ memana : allocated an array of    226.060 Mbytes, for testing purposes.
+ memana: allocated     465.384Mbytes, for testing purposes. 
+ The job will continue.
+
+ DATASET    2 : space group P1 (#  1); Bravais aP (primitive triclinic)
+
+ getdim_nloc : deduce lmnmax  =   8, lnmax  =   4,
+                      lmnmaxso=   8, lnmaxso=   4.
+memory : analysis of memory needs
+================================================================================
+ Values of the parameters that define the memory need for DATASET  2.
+     intxc =       0    ionmov =       0      iscf =      -2    lmnmax =       8
+     lnmax =       4     mgfft =     180  mpssoang =       2    mqgrid =   18831
+     natom =      18  nloc_mem =       2    nspden =       2   nspinor =       1
+    nsppol =       2      nsym =       1    n1xccc =       1    ntypat =       2
+    occopt =       7   xclevel =       1
+-    mband =          40        mffmem =           1         mkmem =          16
+       mpw =       22062          nfft =      155520          nkpt =          16
+ PAW method is used; the additional fine FFT grid is defined by:
+   mgfftf=       288    nfftf =    720000
+================================================================================
+P This job should need less than                     606.845 Mbytes of memory.
+  Rough estimation (10% accuracy) of disk space for files :
+_ WF disk file :    430.900 Mbytes ; DEN or POT disk file :     10.988 Mbytes.
+================================================================================
+
+ Biggest array : cg(disk), with    430.9004 MBytes.
+ memana : allocated an array of    430.900 Mbytes, for testing purposes.
+ memana: allocated     606.845Mbytes, for testing purposes. 
+ The job will continue.
+--------------------------------------------------------------------------------
+------------- Echo of variables that govern the present computation ------------
+--------------------------------------------------------------------------------
+-
+- outvars: echo of selected default values                                      
+-   iomode0 =  0 , fftalg0 =112 , wfoptalg0 = 10
+-
+- outvars: echo of global parameters not present in the input file              
+-  max_nthreads =    0
+-
+ -outvars: echo values of preprocessed input variables --------
+            acell      2.8345891993E+01  6.6140414651E+01  4.6652108581E+00 Bohr
+              amu      1.20110000E+01  1.00794000E+00
+        boxcutmin      1.50000000E+00
+        bxctmindg      1.50000000E+00
+           diemac      1.00000000E+01
+             ecut      1.40000000E+01 Hartree
+           enunit1          0
+           enunit2          1
+-          fftalg         112
+           getden1          0
+           getden2         -1
+             iscf1         17
+             iscf2         -2
+           istwfk1       0    0    0    0    0    0    0    4
+           istwfk2       2    0    0    0    0    0    0    0    0    0
+                         0    0    0    0    0    4
+              ixc           9
+           jdtset        1    2
+              kpt1     0.00000000E+00  0.00000000E+00  3.33333333E-02
+                       0.00000000E+00  0.00000000E+00  1.00000000E-01
+                       0.00000000E+00  0.00000000E+00  1.66666667E-01
+                       0.00000000E+00  0.00000000E+00  2.33333333E-01
+                       0.00000000E+00  0.00000000E+00  3.00000000E-01
+                       0.00000000E+00  0.00000000E+00  3.66666667E-01
+                       0.00000000E+00  0.00000000E+00  4.33333333E-01
+                       0.00000000E+00  0.00000000E+00  5.00000000E-01
+              kpt2     0.00000000E+00  0.00000000E+00  0.00000000E+00
+                       0.00000000E+00  0.00000000E+00  3.33333333E-02
+                       0.00000000E+00  0.00000000E+00  6.66666667E-02
+                       0.00000000E+00  0.00000000E+00  1.00000000E-01
+                       0.00000000E+00  0.00000000E+00  1.33333333E-01
+                       0.00000000E+00  0.00000000E+00  1.66666667E-01
+                       0.00000000E+00  0.00000000E+00  2.00000000E-01
+                       0.00000000E+00  0.00000000E+00  2.33333333E-01
+                       0.00000000E+00  0.00000000E+00  2.66666667E-01
+                       0.00000000E+00  0.00000000E+00  3.00000000E-01
+                       0.00000000E+00  0.00000000E+00  3.33333333E-01
+                       0.00000000E+00  0.00000000E+00  3.66666667E-01
+                       0.00000000E+00  0.00000000E+00  4.00000000E-01
+                       0.00000000E+00  0.00000000E+00  4.33333333E-01
+                       0.00000000E+00  0.00000000E+00  4.66666667E-01
+                       0.00000000E+00  0.00000000E+00  5.00000000E-01
+           kptopt1          1
+           kptopt2         -1
+         kptrlatt        1    0    0      0    1    0      0    0   15
+          kptrlen1     6.99781629E+01
+          kptrlen2     3.00000000E+01
+P           mkmem1          8
+P           mkmem2         16
+            natom          18
+            nband1         42
+            nband2         40
+           nbdbuf1          0
+           nbdbuf2          2
+           ndtset           2
+            ngfft          72     180      12
+          ngfftdg         125     288      20
+             nkpt1          8
+             nkpt2         16
+           nspden           2
+           nsppol           2
+            nstep          80
+             nsym           1
+           ntypat           2
+              occ      1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  0.000000  0.000000  0.000000
+                       0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  0.000000  0.000000  0.000000
+                       0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  0.000000  0.000000  0.000000
+                       0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  0.000000  0.000000  0.000000
+                       0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  0.000000  0.000000  0.000000
+                       0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  0.000000  0.000000  0.000000
+                       0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  0.000000  0.000000  0.000000
+                       0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  0.000000  0.000000  0.000000
+                       0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  0.000000  0.000000  0.000000
+                       0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  0.000000  0.000000  0.000000
+                       0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  0.000000  0.000000  0.000000
+                       0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  0.000000  0.000000  0.000000
+                       0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  0.000000  0.000000  0.000000
+                       0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  0.000000  0.000000  0.000000
+                       0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  0.000000  0.000000  0.000000
+                       0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  1.000000  1.000000  1.000000
+                       1.000000  1.000000  1.000000  0.000000  0.000000  0.000000
+                       0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+           occopt           7
+        pawecutdg      4.00000000E+01 Hartree
+          pawovlp      1.0000000000E+01
+           shiftk1     0.00000000E+00  0.00000000E+00  5.00000000E-01
+           shiftk2     5.00000000E-01  5.00000000E-01  5.00000000E-01
+          spgroup           1
+           spinat      0.0000000000E+00  0.0000000000E+00  1.0000000000E+00
+                       0.0000000000E+00  0.0000000000E+00  0.0000000000E+00
+                       0.0000000000E+00  0.0000000000E+00  0.0000000000E+00
+                       0.0000000000E+00  0.0000000000E+00  0.0000000000E+00
+                       0.0000000000E+00  0.0000000000E+00  0.0000000000E+00
+                       0.0000000000E+00  0.0000000000E+00  0.0000000000E+00
+                       0.0000000000E+00  0.0000000000E+00  0.0000000000E+00
+                       0.0000000000E+00  0.0000000000E+00  0.0000000000E+00
+                       0.0000000000E+00  0.0000000000E+00  0.0000000000E+00
+                       0.0000000000E+00  0.0000000000E+00  0.0000000000E+00
+                       0.0000000000E+00  0.0000000000E+00  0.0000000000E+00
+                       0.0000000000E+00  0.0000000000E+00  0.0000000000E+00
+                       0.0000000000E+00  0.0000000000E+00  0.0000000000E+00
+                       0.0000000000E+00  0.0000000000E+00  0.0000000000E+00
+                       0.0000000000E+00  0.0000000000E+00  0.0000000000E+00
+                       0.0000000000E+00  0.0000000000E+00  0.0000000000E+00
+                       0.0000000000E+00  0.0000000000E+00  0.0000000000E+00
+                       0.0000000000E+00  0.0000000000E+00 -1.0000000000E+00
+           toldfe1     1.00000000E-06 Hartree
+           toldfe2     0.00000000E+00 Hartree
+           tolwfr1     0.00000000E+00
+           tolwfr2     1.00000000E-12
+            typat      2  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  2
+           useylm           1
+              wtk1       0.13333    0.13333    0.13333    0.13333    0.13333    0.13333
+                         0.13333    0.06667
+              wtk2       1.00000    1.00000    1.00000    1.00000    1.00000    1.00000
+                         1.00000    1.00000    1.00000    1.00000    1.00000    1.00000
+                         1.00000    1.00000    1.00000    1.00000
+           xangst      2.1924687653E-06 -8.9347127982E+00  1.2253261414E+00
+                      -6.3335522880E-06 -7.8374663590E+00  1.2252914015E+00
+                      -1.2466279888E-05 -7.1553103483E+00 -9.0703680259E-03
+                      -2.4889138031E-05 -5.7095725410E+00 -9.0145181006E-03
+                      -3.0871693702E-05 -5.0013301057E+00  1.2253608862E+00
+                      -4.2554247256E-05 -3.5682760068E+00  1.2253671991E+00
+                      -4.7331677516E-05 -2.8569447694E+00 -8.9956653736E-03
+                      -5.1814279312E-05 -1.4267271463E+00 -8.9761860125E-03
+                      -5.0440741501E-05 -7.1470430595E-01  1.2253949192E+00
+                      -3.9645629859E-05  7.1487653105E-01  1.2253974953E+00
+                      -3.1339882842E-05  1.4268988477E+00 -8.9725857920E-03
+                      -1.2927341998E-05  2.8571142755E+00 -8.9900137798E-03
+                      -3.8630326290E-06  3.5684443157E+00  1.2253733133E+00
+                       1.1398425826E-05  5.0014956819E+00  1.2253679131E+00
+                       1.7259567710E-05  5.7097392667E+00 -9.0075717678E-03
+                       2.3882826847E-05  7.1554797931E+00 -9.0650236494E-03
+                       2.4511032039E-05  7.8376359584E+00  1.2252964978E+00
+                       2.2583175635E-05  8.9348828407E+00  1.2253293079E+00
+            xcart      4.1431655213E-06 -1.6884160265E+01  2.3155308307E+00
+                      -1.1968679273E-05 -1.4810664994E+01  2.3154651818E+00
+                      -2.3557854884E-05 -1.3521576954E+01 -1.7140511493E-02
+                      -4.7033654562E-05 -1.0789528438E+01 -1.7034970430E-02
+                      -5.8339046355E-05 -9.4511441999E+00  2.3155964889E+00
+                      -8.0415873105E-05 -6.7430644194E+00  2.3156084185E+00
+                      -8.9443907915E-05 -5.3988431909E+00 -1.6999343939E-02
+                      -9.7914797673E-05 -2.6961235729E+00 -1.6962533281E-02
+                      -9.5319187377E-05 -1.3505954042E+00  2.3156608019E+00
+                      -7.4919382799E-05  1.3509208625E+00  2.3156656700E+00
+                      -5.9223795608E-05  2.6964480415E+00 -1.6955729851E-02
+                      -2.4429136002E-05  5.3991635111E+00 -1.6988663975E-02
+                      -7.3000737112E-06  6.7433824771E+00  2.3156199727E+00
+                       2.1539903157E-05  9.4514570936E+00  2.3156097678E+00
+                       3.2615856144E-05  1.0789843504E+01 -1.7021843763E-02
+                       4.5132002020E-05  1.3521897158E+01 -1.7130412085E-02
+                       4.6319137788E-05  1.4810985491E+01  2.3154748124E+00
+                       4.2676017161E-05  1.6884481598E+01  2.3155368145E+00
+             xred      1.4616458439E-07 -2.5527750852E-01  4.9634001573E-01
+                      -4.2223681918E-07 -2.2392761026E-01  4.9632594372E-01
+                      -8.3108532585E-07 -2.0443743852E-01 -3.6741129211E-03
+                      -1.6592758687E-06 -1.6313064403E-01 -3.6514899215E-03
+                      -2.0581129135E-06 -1.4289514588E-01  4.9635408973E-01
+                      -2.8369498171E-06 -1.0195074305E-01  4.9635664688E-01
+                      -3.1554451678E-06 -8.1626993411E-02 -3.6438532911E-03
+                      -3.4542852875E-06 -4.0763632751E-02 -3.6359628316E-03
+                      -3.3627161001E-06 -2.0420123027E-02  4.9636787540E-01
+                      -2.6430419906E-06  2.0425043744E-02  4.9636891889E-01
+                      -2.0893255228E-06  4.0768538506E-02 -3.6345044986E-03
+                      -8.6182279989E-07  8.1631836443E-02 -3.6415640132E-03
+                      -2.5753550862E-07  1.0195555188E-01  4.9635912355E-01
+                       7.5989505505E-07  1.4289987663E-01  4.9635693610E-01
+                       1.1506378473E-06  1.6313540762E-01 -3.6486761866E-03
+                       1.5921884565E-06  2.0444227980E-01 -3.6719480869E-03
+                       1.6340688026E-06  2.2393245595E-01  4.9632800807E-01
+                       1.5055450423E-06  2.5528236688E-01  4.9634129838E-01
+            znucl        6.00000    1.00000
+
+================================================================================
+
+ chkinp: Checking input parameters for consistency, jdtset=   1.
+
+ chkinp: Checking input parameters for consistency, jdtset=   2.
+ DATA TYPE INFORMATION: 
+ REAL:      Data type name: REAL(DP) 
